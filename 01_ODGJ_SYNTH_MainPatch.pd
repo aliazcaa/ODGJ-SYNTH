@@ -1,0 +1,4 @@
+#N canvas 191 19 744 404 12;
+#X obj 282 28 FM_BASS;
+#X obj 498 28 FM_DRONE1;
+#X obj 31 27 MIXER;

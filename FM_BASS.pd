@@ -1,0 +1,128 @@
+#N canvas 367 140 847 585 12;
+#X text 170 117 SUB DRONE;
+#X floatatom 188 577 5 0 0 0 - - - 0;
+#X obj 214 488 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 369 495 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 388 611 1 \$2 \, \$4 \$3 \$2;
+#X obj 139 158 vsl 15 128 0.1 3000 1 0 empty empty A 0 -9 0 10 #9c00ff
+#000000 #000000 0 0;
+#X obj 388 562 pack f f f f;
+#X obj 174 158 vsl 15 128 0.1 1000 1 0 empty empty D 0 -9 0 10 #9c00ff
+#000000 #000000 0 0;
+#X obj 215 158 vsl 15 128 0.01 1 1 0 empty empty S 0 -9 0 10 #9c00ff
+#000000 #000000 0 0;
+#X obj 253 159 vsl 15 128 100 10000 1 0 empty empty R 0 -9 0 10 #9c00ff
+#000000 #000000 0 0;
+#X floatatom 380 398 5 0 0 0 - - - 0;
+#X floatatom 456 375 8 0 0 0 - - - 0;
+#X floatatom 572 362 8 0 0 0 - - - 0;
+#X floatatom 659 357 8 0 0 0 - - - 0;
+#X obj 528 566 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 528 613 0 \$2;
+#X obj 528 586 pack f f;
+#X obj 184 684 *~;
+#X obj 528 527 delay 1000 1 msec;
+#X obj 141 306 hsl 128 15 20 500 0 0 empty empty LPF -2 -8 0 10 #9c00ff
+#000000 #000000 0 0;
+#X floatatom 17 308 8 0 0 0 - - - 0;
+#X obj 107 17 loadbang;
+#X obj 194 30 loadbang;
+#X obj 275 23 loadbang;
+#X obj 347 23 loadbang;
+#X obj 17 252 loadbang;
+#X text 747 48 Add Syth 2021;
+#X msg 109 64 50;
+#X msg 183 67 650;
+#X msg 278 63 0.7;
+#X msg 337 61 560;
+#X obj 142 606 Add_Synth2021;
+#X obj 214 447 r whole_note;
+#X obj 205 541 Scale_Bass;
+#X obj 190 720 s~ SUB;
+#X text 114 -12 A;
+#X text 209 -1 D;
+#X text 288 0 S;
+#X text 361 -8 R;
+#X obj 388 671 vline~;
+#X obj 183 650 lop~, f 6;
+#X obj 19 345 loadbang;
+#X msg 19 379 80;
+#X obj 143 339 hsl 128 15 20 150 0 0 empty empty HPF -2 -8 0 10 #9c00ff
+#000000 #000000 0 0;
+#X floatatom 19 612 5 0 0 0 - - - 0;
+#X obj 127 631 hip~;
+#X msg 17 279 250;
+#X obj 143 371 hsl 128 15 0 1000 0 0 empty empty AM1 -2 -8 0 10 #9c00ff
+#000000 #000000 0 0;
+#X obj 28 420 loadbang;
+#X msg 28 445 0;
+#X floatatom 28 467 5 0 0 0 - - - 0;
+#X obj 28 496 s AM1;
+#X obj 143 404 hsl 128 15 0 100 0 0 empty empty AM2 -2 -8 0 10 #9c00ff
+#000000 #000000 0 0;
+#X obj 98 461 loadbang;
+#X msg 98 486 0;
+#X floatatom 98 518 5 0 0 0 - - - 0;
+#X obj 98 547 s AM2;
+#X connect 1 0 31 0;
+#X connect 2 0 33 0;
+#X connect 2 0 3 0;
+#X connect 3 0 6 0;
+#X connect 3 0 18 0;
+#X connect 4 0 39 0;
+#X connect 5 0 10 0;
+#X connect 6 0 4 0;
+#X connect 7 0 11 0;
+#X connect 8 0 12 0;
+#X connect 9 0 13 0;
+#X connect 10 0 6 1;
+#X connect 11 0 6 2;
+#X connect 12 0 6 3;
+#X connect 13 0 16 1;
+#X connect 14 0 16 0;
+#X connect 15 0 39 0;
+#X connect 16 0 15 0;
+#X connect 17 0 34 0;
+#X connect 18 0 14 0;
+#X connect 19 0 20 0;
+#X connect 20 0 40 1;
+#X connect 21 0 27 0;
+#X connect 22 0 28 0;
+#X connect 23 0 29 0;
+#X connect 24 0 30 0;
+#X connect 25 0 46 0;
+#X connect 27 0 10 0;
+#X connect 27 0 5 0;
+#X connect 28 0 11 0;
+#X connect 28 0 7 0;
+#X connect 29 0 12 0;
+#X connect 29 0 8 0;
+#X connect 30 0 13 0;
+#X connect 30 0 9 0;
+#X connect 31 0 45 0;
+#X connect 32 0 2 0;
+#X connect 33 0 1 0;
+#X connect 39 0 17 1;
+#X connect 40 0 17 0;
+#X connect 41 0 42 0;
+#X connect 42 0 44 0;
+#X connect 42 0 43 0;
+#X connect 43 0 44 0;
+#X connect 44 0 45 1;
+#X connect 45 0 40 0;
+#X connect 46 0 20 0;
+#X connect 46 0 19 0;
+#X connect 47 0 50 0;
+#X connect 48 0 49 0;
+#X connect 49 0 47 0;
+#X connect 49 0 50 0;
+#X connect 50 0 51 0;
+#X connect 52 0 55 0;
+#X connect 53 0 54 0;
+#X connect 54 0 55 0;
+#X connect 54 0 52 0;
+#X connect 55 0 56 0;
+#X coords 0 -1 1 1 202 337 2 100 100;
